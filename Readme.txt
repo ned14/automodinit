@@ -18,12 +18,12 @@ new files added. This causes the following, irritating problems:
    an executable binary because they don't understand running from
    inside a ZIP archive.
    
- So here's how to make the problem go away forever:
+So here's how to make the problem go away forever:
  
- 1. Include the automodinit package into your setup.py dependencies.
- 2. Replace all __init__.py files like this:
+1. Include the automodinit package into your setup.py dependencies.
+2. Replace all __init__.py files like this:
  
- __all__ = ["I will get rewritten"]
+__all__ = ["I will get rewritten"]
 # Don't modify the line above, or this line!
 import automodinit
 automodinit.automodinit(__file__, globals())
@@ -51,4 +51,8 @@ importFindings: Defaults to True. Set to False to not auto-import
 
 Version history:
 -=-=-=-=-=-=-=-=
- * v0.50 First release
+ * v0.11 ?
+   * Fixed some typos in Readme.txt
+
+ * v0.10 5th Mar 2012
+   First release
