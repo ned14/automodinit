@@ -1,8 +1,8 @@
 __all__ = ['automodinit', 'foo']
 # Don't modify the line above, or this line!
-import automodinit
-automodinit.automodinit(__file__, globals())
-del automodinit
+from automodinit import automodinit as ami
+ami(__name__, __file__, globals())
+automodinit=ami
 
 # automodinit
 # Solves the problem of forgetting to keep __init__.py files up to date

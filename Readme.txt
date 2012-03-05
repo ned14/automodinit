@@ -1,4 +1,4 @@
-automodinit v0.10 5th March 2011:
+automodinit v0.11 5th March 2011:
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 Niall Douglas http://www.nedproductions.biz/
 See http://pypi.python.org/pypi/automodinit for latest version
@@ -26,7 +26,7 @@ So here's how to make the problem go away forever:
 __all__ = ["I will get rewritten"]
 # Don't modify the line above, or this line!
 import automodinit
-automodinit.automodinit(__file__, globals())
+automodinit.automodinit(__name__, __file__, globals())
 del automodinit
 # Anything else you want can go after here, it won't get modified.
 
@@ -51,8 +51,9 @@ importFindings: Defaults to True. Set to False to not auto-import
 
 Version history:
 -=-=-=-=-=-=-=-=
- * v0.11 ?
+ * v0.11 5th Mar 2012
    * Fixed some typos in Readme.txt
+   * Typically what worked before packaging did not work after. Fixed!
 
  * v0.10 5th Mar 2012
    First release

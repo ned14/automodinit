@@ -6,7 +6,7 @@
 
 import os, pkgutil, sys, inspect
 
-def automodinit(initfilepath, _g, filter=None, importFindings=True):
+def automodinit(fullmodulename, initfilepath, _g, filter=None, importFindings=True):
     if os.sep+'__init__.py' not in initfilepath: raise Exception, "'"+initfilepath+"' not an __init__ file"
     modulepath=os.path.dirname(initfilepath)
     modulecontents=[x for x in pkgutil.iter_modules([modulepath])]
@@ -38,10 +38,9 @@ def automodinit(initfilepath, _g, filter=None, importFindings=True):
         _g['__all__']=modulefiles
 
     if importFindings:
-        #parentmodulename=os.path.relpath(modulepath)
-        #parentmodulename=parentmodulename.replace(os.sep, '.')
         for loader, modulename, ispkg in modulecontents:
-            #fullmodulename=parentmodulename+'.'+modulename
-            module=loader.find_module(modulename).load_module(modulename)
+            fullmodulename2=fullmodulename+'.'+modulename
+            #print fullmodulename2
+            module=loader.find_module(fullmodulename2).load_module(fullmodulename2)
             _g[modulename]=module
             
