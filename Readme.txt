@@ -1,4 +1,4 @@
-automodinit v0.11 5th March 2011:
+automodinit v0.12 5th March 2011:
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 Niall Douglas http://www.nedproductions.biz/
 See http://pypi.python.org/pypi/automodinit for latest version
@@ -51,6 +51,11 @@ importFindings: Defaults to True. Set to False to not auto-import
 
 Version history:
 -=-=-=-=-=-=-=-=
+ * v0.12 5th Mar 2012
+   * Fixed a bug where isinstance would occasionally fail. Turns out the
+pkgutil loading mechanism doesn't check to see if the module is already
+loaded, so it was loading duplicates whose types wouldn't compare.
+
  * v0.11 5th Mar 2012
    * Fixed some typos in Readme.txt
    * Typically what worked before packaging did not work after. Fixed!

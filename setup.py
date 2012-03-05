@@ -12,7 +12,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='automodinit',
-    version="0.11",
+    version="0.12",
     description='Solves the problem of forgetting to keep __init__.py files up to date',
     author='Niall Douglas',
     url='http://pypi.python.org/pypi/automodinit',

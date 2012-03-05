@@ -39,8 +39,11 @@ def automodinit(fullmodulename, initfilepath, _g, filter=None, importFindings=Tr
 
     if importFindings:
         for loader, modulename, ispkg in modulecontents:
-            fullmodulename2=fullmodulename+'.'+modulename
-            #print fullmodulename2
-            module=loader.find_module(fullmodulename2).load_module(fullmodulename2)
+            fullmodulename2=fullmodulename+'.'+modulename            
+            #print fullmodulename2, "Already loaded=",fullmodulename2 in sys.modules
+            if fullmodulename2 in sys.modules:
+                module=sys.modules[fullmodulename2]
+            else:
+                module=loader.find_module(fullmodulename2).load_module(fullmodulename2)
             _g[modulename]=module
             
