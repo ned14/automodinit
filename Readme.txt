@@ -1,5 +1,5 @@
-automodinit v0.12 5th March 2011:
--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+automodinit v0.13 9th February 2013:
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 Niall Douglas http://www.nedproductions.biz/
 See http://pypi.python.org/pypi/automodinit for latest version
 Go to http://github.com/ned14/automodinit to report bugs
@@ -51,6 +51,10 @@ importFindings: Defaults to True. Set to False to not auto-import
 
 Version history:
 -=-=-=-=-=-=-=-=
+ * v0.13 9th Feb 2013
+   * Fixed a bug where the source distribution would fail to install due
+to not including distribute_setup.py. Thanks to kanzure for reporting this.
+
  * v0.12 5th Mar 2012
    * Fixed a bug where isinstance would occasionally fail. Turns out the
 pkgutil loading mechanism doesn't check to see if the module is already
