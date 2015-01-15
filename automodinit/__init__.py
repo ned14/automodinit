@@ -1,6 +1,6 @@
 __all__ = ['automodinit', 'foo']
 # Don't modify the line above, or this line!
-from automodinit import automodinit as ami
+from .automodinit import automodinit as ami
 ami(__name__, __file__, globals())
 automodinit=ami
 
