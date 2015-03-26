@@ -5,10 +5,10 @@
 # See http://pypi.python.org/pypi/automodinit for latest version
 # Go to http://github.com/ned14/automodinit to report bugs
 
-from distribute_setup import use_setuptools
-use_setuptools()
-
-from setuptools import setup, find_packages
+try:
+    from setuptools import setup
+except ImportError:
+    from distutils.core import setup
 
 setup(
     name='automodinit',
@@ -16,7 +16,7 @@ setup(
     description='Solves the problem of forgetting to keep __init__.py files up to date',
     author='Niall Douglas',
     url='http://pypi.python.org/pypi/automodinit',
-    packages=find_packages(),
+    packages=["automodinit", ],
     test_suite='tests',
     install_requires=[],
     )

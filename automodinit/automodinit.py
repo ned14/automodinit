@@ -7,7 +7,7 @@
 import os, pkgutil, sys, inspect
 
 def automodinit(fullmodulename, initfilepath, _g, filter=None, importFindings=True):
-    if os.sep+'__init__.py' not in initfilepath: raise Exception, "'"+initfilepath+"' not an __init__ file"
+    if os.sep+'__init__.py' not in initfilepath: raise Exception("'"+initfilepath+"' not an __init__ file")
     modulepath=os.path.dirname(initfilepath)
     modulecontents=[x for x in pkgutil.iter_modules([modulepath])]
 
@@ -26,7 +26,7 @@ def automodinit(fullmodulename, initfilepath, _g, filter=None, importFindings=Tr
                     insertpoint=myself.find("# Don't modify the line above, or this line!")
                     if insertpoint==-1:
                         badmagic=True
-                        raise Exception, "Calling file missing magic modify line"
+                        raise Exception("Calling file missing magic modify line")
                     newmyself='__all__ = '+repr(modulefiles)+'\n'
                     newmyself+=myself[insertpoint:]
                     meh.seek(0)
