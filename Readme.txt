@@ -1,13 +1,13 @@
-automodinit v0.13 9th February 2013:
--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+automodinit v0.14 5th March 2017:
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 Niall Douglas http://www.nedproductions.biz/
 See http://pypi.python.org/pypi/automodinit for latest version
 Go to http://github.com/ned14/automodinit to report bugs
 
-Is this the smallest package on Pypi? That I have no idea, but it fixes
-a small problem which has been bugging me throughout years of python
-development: forgetting to keep a module's __init__.py up to date with
-new files added. This causes the following, irritating problems:
+This package fixes a small problem which has been bugging me throughout
+years of python development: forgetting to keep a module's __init__.py
+up to date with new files added. This causes the following, irritating
+problems:
 
 1. Test suites don't find docstring tests.
 2. Static analysis tools don't see some module content in __all__.
@@ -51,6 +51,12 @@ importFindings: Defaults to True. Set to False to not auto-import
 
 Version history:
 -=-=-=-=-=-=-=-=
+ * v0,14 5th Mar 2017
+   * Fixed stripping of __init__.py file encoding. Thanks to wtyerogers
+for reporting this.
+   * Removed suggestion this is the smallest package on pypi. Thanks to
+asl97 for reporting this.
+
  * v0.13 9th Feb 2013
    * Fixed a bug where the source distribution would fail to install due
 to not including distribute_setup.py. Thanks to kanzure for reporting this.
