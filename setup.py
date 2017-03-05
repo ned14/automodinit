@@ -12,7 +12,7 @@ except ImportError:
 
 setup(
     name='automodinit',
-    version="0.13",
+    version="0.14",
     description='Solves the problem of forgetting to keep __init__.py files up to date',
     author='Niall Douglas',
     url='http://pypi.python.org/pypi/automodinit',
