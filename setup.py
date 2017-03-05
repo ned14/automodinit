@@ -19,7 +19,7 @@ with open(os.path.join(here, 'Readme.txt')) as f:
     
 setup(
     name='automodinit',
-    version="0.15",
+    version="0.16",
     description='Solves the problem of forgetting to keep __init__.py files up to date',
     long_description=long_description,
     author='Niall Douglas',
@@ -27,6 +27,7 @@ setup(
     packages=["automodinit", ],
     test_suite='tests',
     install_requires=[],
+    package_data={'':['Readme.txt']},
     license='MIT',
     classifiers=[
         'Development Status :: 6 - Mature',
