@@ -1,4 +1,4 @@
-automodinit v0.14 5th March 2017:
+automodinit v0.15 5th March 2017:
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 Niall Douglas http://www.nedproductions.biz/
 See http://pypi.python.org/pypi/automodinit for latest version
@@ -51,11 +51,13 @@ importFindings: Defaults to True. Set to False to not auto-import
 
 Version history:
 -=-=-=-=-=-=-=-=
- * v0,14 5th Mar 2017
+ * v0,15 5th Mar 2017
    * Fixed stripping of __init__.py file encoding. Thanks to wtyerogers
 for reporting this.
    * Removed suggestion this is the smallest package on pypi. Thanks to
 asl97 for reporting this.
+   * Tell PyPi we are under the MIT licence. Thanks to njwhite for
+reporting this.
 
  * v0.13 9th Feb 2013
    * Fixed a bug where the source distribution would fail to install due
