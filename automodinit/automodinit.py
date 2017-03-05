@@ -27,7 +27,8 @@ def automodinit(fullmodulename, initfilepath, _g, filter=None, importFindings=Tr
                     if insertpoint==-1:
                         badmagic=True
                         raise Exception("Calling file missing magic modify line")
-                    newmyself='__all__ = '+repr(modulefiles)+'\n'
+                    newmyself=myself[:myself.find("__all__")]
+                    newmyself+='__all__ = '+repr(modulefiles)+'\n'
                     newmyself+=myself[insertpoint:]
                     meh.seek(0)
                     meh.write(newmyself)
